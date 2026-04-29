@@ -1,0 +1,59 @@
+name: Odd Lots Emailer
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 11 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: odd-lots-emailer
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install project
+        run: python -m pip install -e .
+
+      - name: Run tests
+        run: python -m unittest discover -s tests
+
+      - name: Send latest transcripts
+        id: send
+        continue-on-error: true
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
+          RESEND_TO_EMAIL: ${{ secrets.RESEND_TO_EMAIL }}
+        run: python -m odd_lots run
+
+      - name: Commit state changes
+        shell: bash
+        run: |
+          if git diff --quiet -- sent_episodes.json; then
+            echo "No state changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sent_episodes.json
+          git commit -m "Update sent Odd Lots episodes"
+          git push
+
+      - name: Fail if sending failed
+        if: steps.send.outcome == 'failure'
+        run: exit 1

@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "odd-lots-transcript"
+version = "0.1.0"
+description = "Daily Odd Lots transcript emailer"
+requires-python = ">=3.11"
+readme = "README.md"
+dependencies = []
+
+[project.scripts]
+odd-lots-transcript = "odd_lots.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
