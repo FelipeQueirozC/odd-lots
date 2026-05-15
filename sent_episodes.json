@@ -891,6 +891,15 @@
       "title": "The Important Lesson a Quant Manager Learned in 2020",
       "transcript_url": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/3da8b7f9-406e-4c0f-8b64-ae2700472838/transcript?format=TextWithTimestamps&t=1700513863"
     },
+    "17364f35-3bd0-469d-b500-b44a0132582f": {
+      "episode_url": "https://omny.fm/shows/odd-lots/why-socgens-albert-edwards-sees-double-digit-inflation-coming-back",
+      "guid": "17364f35-3bd0-469d-b500-b44a0132582f",
+      "publication_date": "2026-05-15",
+      "sent_at": "2026-05-15T13:13:43.924143Z",
+      "status": "sent",
+      "title": "Why SocGen's Albert Edwards Sees Double-Digit Inflation Coming Back",
+      "transcript_url": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/17364f35-3bd0-469d-b500-b44a0132582f/transcript?format=TextWithTimestamps&t=1778784125"
+    },
     "177ff031-ef14-4778-807f-b38c014def5c": {
       "episode_url": "https://omny.fm/shows/odd-lots/dmitry-shevelenko-on-perplexitys-vision-for-reshaping-the-internet",
       "guid": "177ff031-ef14-4778-807f-b38c014def5c",
@@ -7163,6 +7172,15 @@
       "status": "skipped_initial_backfill",
       "title": "How To Fund The Search For A COVID-19 Vaccine And Boost The Recovery",
       "transcript_url": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/a22de96c-7692-44a2-a321-ae27004eebd3/transcript?format=TextWithTimestamps&t=1700513888"
+    },
+    "c68ed904-5c11-44f9-909c-b44a00200c14": {
+      "episode_url": "https://omny.fm/shows/odd-lots/martin-wolf-on-the-terrifying-superpower-that-the-us-wields",
+      "guid": "c68ed904-5c11-44f9-909c-b44a00200c14",
+      "publication_date": "2026-05-14",
+      "sent_at": "2026-05-15T13:13:43.551894Z",
+      "status": "sent",
+      "title": "Martin Wolf on the 'Terrifying' Superpower That the US Wields",
+      "transcript_url": "https://api.omny.fm/orgs/e73c998e-6e60-432f-8610-ae210140c5b1/clips/c68ed904-5c11-44f9-909c-b44a00200c14/transcript?format=TextWithTimestamps&t=1778724114"
     },
     "c6e213ba-c5a7-400c-a5eb-ae8501291f39": {
       "episode_url": "https://omny.fm/shows/odd-lots/this-is-how-a-locked-down-shanghai-apartment-gets",
